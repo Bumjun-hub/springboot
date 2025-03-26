@@ -9,5 +9,4 @@ public class Ex01JavaDiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(Ex01JavaDiApplication.class, args);
 	}
-
 }
