@@ -13,15 +13,21 @@ java {
 	}
 }
 
+eclipse.wtp.facet {
+	facet name : 'jst.web', version: '6.0'
+}
+
 repositories {
 	mavenCentral()
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	runtimeOnly 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	
+	// jsp설정
 	implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
     implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
@@ -31,5 +37,3 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-
-
