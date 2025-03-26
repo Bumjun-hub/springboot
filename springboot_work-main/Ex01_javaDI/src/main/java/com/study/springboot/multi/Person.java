@@ -39,6 +39,6 @@ public class Person {
 	}
 	
 	public void print() {
-		printer.print("Hello " + name + " : " + nickname);
+		printer.print("Hellooo " + name + " : " + nickname);
 	}
 }
