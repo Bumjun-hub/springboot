@@ -1,3 +1,4 @@
+
 package com.study.springboot.service;
 
 import java.util.List;
@@ -31,14 +32,12 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public int insertBoard(Board b) {
-		// TODO Auto-generated method stub
-		return 0;
+		return boardDao.insertBoard(b);
 	}
 
 	@Override
-	public int deleteBoard(int boardno) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int deleteBoard(String boardno) {
+		return boardDao.deleteBoard(boardno);
 	}
 
 	

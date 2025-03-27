@@ -8,5 +8,6 @@ public interface BoardService {
 	public int totalRecord();
 	public Board detailBoard(String boardno);
 	public int insertBoard(Board b);
-	public int deleteBoard(int boardno);
+	public int deleteBoard(String boardno);
+	
 }
