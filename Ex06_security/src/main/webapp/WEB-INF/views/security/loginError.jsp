@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	로그인 실패<br><br>
+	<h1>로그인 실패<h1></h1><br><br>
 <a href ="loginForm">로그인 페이지로 가기</a>
 
 </body>
