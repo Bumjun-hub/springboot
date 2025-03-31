@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	welcome : Member <br><br>
+	welcome : Admin <br><br>
 	
 	USER ID : ${pageContext.request.userPrincipal.name}<br><br>
 	
