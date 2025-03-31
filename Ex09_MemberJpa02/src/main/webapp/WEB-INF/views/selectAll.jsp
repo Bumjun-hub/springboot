@@ -12,8 +12,8 @@
 	
 	<c:forEach var="m" items="${members}">
 		아이디 : ${m.id}<br>
-		이름 : ${m.username}<br>
-		날짜 : ${m.createDate}<hr>
+		이름 : ${m.name}<br>
+		날짜 : ${m.email}<hr>
 	</c:forEach>
 </body>
 </html>

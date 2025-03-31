@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,10 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Member JPA #01 - Insert</h1>
-	
-	아이디 : ${member.id}<br><br>
-	이름 : ${member.username}<br><br>
-	날짜 : ${member.createDate}<br><br>
+ID : ${member.id }<br>
+NAME : ${member.name }<br>
+생성된 날짜 : ${member.createdAt}
 </body>
 </html>

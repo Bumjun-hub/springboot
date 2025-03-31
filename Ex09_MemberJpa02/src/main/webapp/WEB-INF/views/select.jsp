@@ -10,7 +10,7 @@
 	<h1>Member JPA #01 - Select</h1>
 	
 	아이디 : ${member.id}<br><br>
-	이름 : ${member.username}<br><br>
-	날짜 : ${member.createDate}<br><br>
+	이름 : ${member.name}<br><br>
+	이메일 : ${member.email}<br><br>
 </body>
 </html>
