@@ -21,7 +21,7 @@
 	<a href="/select?id=1">개별 조회</a>
 	<hr>
 
-	<a href="selectByName?name=홍길동"></a>
+	<a href="selectByName?name=더조은">개별조회 - ByName</a>
 	<a href="selectByEmail?email=test2@test.com">개별 조회 - ByEmail</a>
 	<a href="selectByNameLike?name=김">개별조회 - ByNameLike</a>
 	<a href=/selectByNameLikeNameDesc?name=김>개별 조회 - ByName Like Name Desc</a><br><br>

@@ -31,13 +31,6 @@ public class MemberController {
 		return "redirect:selectAll";
 	}
 
-	@RequestMapping("/selectAll")
-	public String selectAll(Model model) {
-		List<Member> result = memberService.selectAll();
-		model.addAttribute("members", result);
-		return "selectAll";
-	}
-
 	@RequestMapping("/select")
 	public String select(@RequestParam("id") Long id, Model model) {
 		Optional<Member> result = memberService.select(id);
@@ -49,6 +42,17 @@ public class MemberController {
 		}
 		return "select";
 	}
+	
+	
+	
+	@RequestMapping("/selectAll")
+	public String selectAll(Model model) {
+		List<Member> result = memberService.selectAll();
+		model.addAttribute("members", result);
+		return "selectAll";
+	}
+
+
 
 	@RequestMapping("/selectByName")
 	public String selectByName(@RequestParam("name") String name, Model model) {
@@ -63,7 +67,6 @@ public class MemberController {
 	}
 
 	@RequestMapping("/selectByEmail")
-
 	public String selectByEmail(@RequestParam("email") String email, Model model) {
 		Optional<Member> member = memberService.selectByEmail(email);
 		if (member.isPresent()) {
