@@ -21,32 +21,33 @@ import lombok.NonNull;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 public class Board {
-	
+
 	@Id
-	@SequenceGenerator(
-		name = "BoardSEQ",
-		sequenceName="Board_SEQ",
-		allocationSize=1
-		)
-	@GeneratedValue(generator="BoardSEQ")
+	@SequenceGenerator (
+			name = "myBoardSEQ",
+			sequenceName="Board_SEQ",
+			allocationSize=1
+	)
+	@GeneratedValue(generator="myBoardSEQ")
 	private Long bno;
+	
+	@NonNull
 	private String title;
+	
 	@NonNull
 	private String content;
 	
 	@NonNull
 	private String writer;
+	
 	@Column(insertable=false, columnDefinition="NUMBER DEFAULT 0")
 	private Long count;
 	
 	@CreatedDate
-	@Column(name = "create_date")
+	@Column(name="create_date")
 	private LocalDateTime createDate;
-
+	
 	@LastModifiedDate
-	@Column(name = "update_date")
+	@Column(name="update_date")
 	private LocalDateTime updateDate;
-	
-	
-	
 }

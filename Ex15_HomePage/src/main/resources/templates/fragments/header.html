@@ -35,13 +35,12 @@
 			<table>
 				<tr>
 					<td colspan="2">
-						<!-- <h3 th:text="${loginUser.name}"></h3> -->
-                        <!-- [[ 문자로 인식 ]]  -->
+						
                          <h3>[[${loginUser.name}]]님 환영합니다.</h3>
 					</td>
 				</tr>
                 <tr>
-                    <td><a href="">마이페이지</a></td>
+                    <td><a href="mypage">마이페이지</a></td>
                     <td><a href="logout">로그아웃</a></td>
                 </tr>
 			</table>
@@ -53,7 +52,7 @@
             <tr>
                 <td onclick="location.href='index'">Home</td>
                 <td>공지사항</td>
-                <td>게시판</td>
+                <td onclick="location.href='list'">게시판</td>
                 <td>찾아오는길</td>
             </tr>
         </table>

@@ -22,26 +22,29 @@ import lombok.NonNull;
 @EntityListeners(AuditingEntityListener.class)
 public class Reply {
 	@Id
-	@SequenceGenerator(name = "ReplySEQ", sequenceName = "Reply_SEQ", allocationSize = 1)
-	@GeneratedValue(generator = "ReplySEQ")
-
-	@NonNull
-	@Column(name = "ref_bno")
-	private Long refBno;
-
-	@NonNull
-	private String writer;
-
-	private String title;
+	@SequenceGenerator (
+			name = "myReplySEQ",
+			sequenceName="Reply_SEQ",
+			allocationSize=1
+	)
+	@GeneratedValue(generator="myReplySEQ")
+	private Long rno;
+	
 	@NonNull
 	private String content;
-
+	
+	@NonNull
+	private String writer;
+	
+	@NonNull
+	@Column(name="ref_bno")
+	private Long refBno;
+	
 	@CreatedDate
-	@Column(name = "create_date")
+	@Column(name="create_date")
 	private LocalDateTime createDate;
-
+	
 	@LastModifiedDate
-	@Column(name = "update_date")
+	@Column(name="update_date")
 	private LocalDateTime updateDate;
-
 }
