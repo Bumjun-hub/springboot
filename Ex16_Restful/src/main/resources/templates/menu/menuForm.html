@@ -252,8 +252,21 @@
 					const menu = {};
 					frmData.forEach((value, key) => {
 						menu[key] = value;
-					});
 
+					});
+					$.ajax({
+						url: `/menu`,
+						method: 'PUT',
+						data: JSON.stringify(menu),
+						contentType: 'application/json',
+						success(result) {
+							console.log(result);
+							if (result != null) {
+								alert('수정 되었습니다');
+							}
+						},
+						error: console.log
+					})
 				});
 
 			});
@@ -288,6 +301,8 @@
 				container.innerHTML = value;
 			}
 		</script>
+
+
 		<script>
 
 			const findById = id => {
