@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +23,7 @@ import com.study.springboot.service.MenuService;
 @RestController
 @RequestMapping("/menu")
 public class MenuRestController {
+	
 	
 	@Autowired
 	MenuService menuService;
@@ -103,5 +105,11 @@ public class MenuRestController {
 	public ResponseEntity<?> updateMenu(@RequestBody Menu menu) {
 		Menu reMenu = menuService.insertMenu(menu);
 		return ResponseEntity.ok(reMenu);
+	}
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<?> deleteMenu(@PathVariable(name="id")Long id){
+		menuService.deleteMenu(id);
+		return ResponseEntity.noContent().build(); // http 상태코드 204
 	}
 }
